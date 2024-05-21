@@ -1,13 +1,17 @@
 package com.retexspa.xr.ms.ledger.main.query.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.retexspa.xr.ms.ledger.main.core.dto.tabTipiPagamento.TabTipiPagamentoBaseDTO;
+import com.retexspa.xr.ms.main.core.dto.Enums;
 import com.retexspa.xr.ms.main.core.dto.attributo.AttributoBaseDTO;
+import com.retexspa.xr.ms.main.core.helpers.EnumValidator;
 import com.retexspa.xr.ms.main.query.entities.AttributoQueryEntity;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "tabTipiPagamento")
@@ -16,35 +20,48 @@ public class TabTipiPagamentoQueryEntity {
     @Id
     @NonNull
     private String id;
-    @Column(name="codTipoPag")
+    @Column(name = "codTipoPag")
     private Integer codTipoPag;
-    @Column(name="desTipoPagb")
+    @Column(name = "desTipoPagb")
     private String desTipoPagb;
-    @Column(name="desTipoPagl")
+    @Column(name = "desTipoPagl")
     private String desTipoPagl;
-    @Column(name="flgContante")
+
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgContante")
     private String flgContante;
-    @Column(name="flgAssegno")
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgAssegno")
     private String flgAssegno;
-    @Column(name="flgPos")
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgPos")
     private String flgPos;
-    @Column(name="flgNonRiscosso")
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgNonRiscosso")
     private String flgNonRiscosso;
-    @Column(name="flgSostDenaro")
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgSostDenaro")
     private String flgSostDenaro;
-    @Column(name="flgBuoniEnti")
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgBuoniEnti")
     private String flgBuoniEnti;
-    @Column(name="flgBuoniDay")
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgBuoniDay")
     private String flgBuoniDay;
-    @Column(name="flgFatturaPagata")
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgFatturaPagata")
     private String flgFatturaPagata;
-    @Column(name="flgBuoniCeliaci")
+    @EnumValidator(enumClazz = Enums.CheckSN.class)
+    @Column(name = "flgBuoniCeliaci")
     private String flgBuoniCeliaci;
 
-    /*@OneToMany(fetch = FetchType.LAZY, mappedBy = "tabTipiPagamento")
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<AttributoQueryEntity> attributi;
-*/
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "tabTipiPagamento")
+    @JsonIgnore
+    private Set<TabTipiPagamentoAttributoQueryEntity> tabTipiPagamentoAttributi;
+
+    @Column(name = "version")
+    private Long version;
+
 
     public TabTipiPagamentoQueryEntity() {
     }
@@ -168,5 +185,21 @@ public class TabTipiPagamentoQueryEntity {
 
     public void setFlgBuoniCeliaci(String flgBuoniCeliaci) {
         this.flgBuoniCeliaci = flgBuoniCeliaci;
+    }
+
+    public Long getVersion() {
+        return version;
+    }
+
+    public void setVersion(Long version) {
+        this.version = version;
+    }
+
+    public Set<TabTipiPagamentoAttributoQueryEntity> getTabTipiPagamentoAttributi() {
+        return tabTipiPagamentoAttributi;
+    }
+
+    public void setTabTipiPagamentoAttributi(Set<TabTipiPagamentoAttributoQueryEntity> tabTipiPagamentoAttributi) {
+        this.tabTipiPagamentoAttributi = tabTipiPagamentoAttributi;
     }
 }
