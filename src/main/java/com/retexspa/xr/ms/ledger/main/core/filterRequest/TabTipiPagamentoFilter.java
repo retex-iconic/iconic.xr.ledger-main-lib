@@ -80,7 +80,7 @@ public class TabTipiPagamentoFilter {
                     filter.setVersion((Long) codTipoPag);
                 }
             }
-        }
+
         filter.setDesTipoPagb((String) map.get("desTipoPagb"));
         filter.setDesTipoPagl((String) map.get("desTipoPagl"));
         filter.setFlgContante((String) map.get("flgContante"));
@@ -99,6 +99,7 @@ public class TabTipiPagamentoFilter {
             } else if (version instanceof Long) {
                 filter.setVersion((Long) version);
             }
+        }
         }
         return filter;
     }
