@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.retexspa.xr.ms.main.core.dto.BaseDTO;
+import com.retexspa.xr.ms.ledger.main.core.dto.BaseDTO;
 import com.retexspa.xr.ms.main.core.dto.Enums;
 import com.retexspa.xr.ms.main.core.dto.attributo.AttributoBaseDTO;
 import com.retexspa.xr.ms.main.core.dto.attributo.AttributoValoreDTO;
@@ -18,7 +18,7 @@ import java.util.UUID;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class TabTipiPagamentoBaseDTO {
+public class TabTipiPagamentoBaseDTO extends BaseDTO {
     @NotNull(message = "codTipoPag is mandatory")
     private Integer codTipoPag;
     @NotNull(message = "desTipoPagb is mandatory")

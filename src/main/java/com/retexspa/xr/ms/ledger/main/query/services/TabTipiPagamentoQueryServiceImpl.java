@@ -41,14 +41,14 @@ public class TabTipiPagamentoQueryServiceImpl implements TabTipiPagamentoQuerySe
                         (baseSort.getOrderType() != null ?
                                 (baseSort.getOrderType().equalsIgnoreCase("ASC") ? Sort.Direction.ASC : Sort.Direction.DESC) :
                                 Sort.Direction.ASC),
-                        (baseSort.getOrderBy() != null ? baseSort.getOrderBy() : "codice")
+                        (baseSort.getOrderBy() != null ? baseSort.getOrderBy() : "codTipoPag")
                 );
 
                 sorts.add(sort);
             }
         }
         if (sorts.size() == 0) {
-            sorts.add(new Sort.Order(Sort.Direction.ASC, "codice"));
+            sorts.add(new Sort.Order(Sort.Direction.ASC, "codTipoPag"));
         }
 
         Pageable pageable = PageRequest.of(query.getPage(), query.getLimit(), Sort.by(sorts));
@@ -77,48 +77,48 @@ public class TabTipiPagamentoQueryServiceImpl implements TabTipiPagamentoQuerySe
 
         if (filter.getFlgContante() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgContante")), "%" + filter.getFlgContante().toUpperCase() + "%"));
+                    (r, q, c) ->
+                            c.equal(r.get("flgContante"),filter.getFlgContante()));
         }
         if (filter.getFlgAssegno() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgAssegno")), "%" + filter.getFlgAssegno().toUpperCase() + "%"));
+                    (r, q, c) -> c.equal(
+                           r.get("flgAssegno"), filter.getFlgAssegno()));
         }
         if (filter.getFlgPos() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgPos")), "%" + filter.getFlgPos().toUpperCase() + "%"));
+                    (r, q, c) -> c.equal(
+                            r.get("flgPos"), filter.getFlgPos()));
         }
         if (filter.getFlgNonRiscosso() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgNonRiscosso")), "%" + filter.getFlgNonRiscosso().toUpperCase() + "%"));
+                    (r, q, c) -> c.equal(
+                           r.get("flgNonRiscosso"),  filter.getFlgNonRiscosso()));
         }
         if (filter.getFlgSostDenaro() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgSostDenaro")), "%" + filter.getFlgSostDenaro().toUpperCase() + "%"));
+                    (r, q, c) -> c.equal(
+                            r.get("flgSostDenaro"),  filter.getFlgSostDenaro()));
         }
         if (filter.getFlgBuoniEnti() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgBuoniEnti")), "%" + filter.getFlgBuoniEnti().toUpperCase() + "%"));
+                    (r, q, c) -> c.equal(
+                            r.get("flgBuoniEnti"),  filter.getFlgBuoniEnti()));
         }
         if (filter.getFlgBuoniDay() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgBuoniDay")), "%" + filter.getFlgBuoniDay().toUpperCase() + "%"));
+                    (r, q, c) -> c.equal(
+                           r.get("flgBuoniDay"),  filter.getFlgBuoniDay()));
         }
         if (filter.getFlgFatturaPagata() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgFatturaPagata")), "%" + filter.getFlgFatturaPagata().toUpperCase() + "%"));
+                    (r, q, c) -> c.equal(
+                            r.get("flgFatturaPagata"),  filter.getFlgFatturaPagata()));
         }
         if (filter.getFlgBuoniCeliaci() != null) {
             specifications.add(
-                    (r, q, c) -> c.like(
-                            c.upper(r.get("flgBuoniCeliaci")), "%" + filter.getFlgBuoniCeliaci().toUpperCase() + "%"));
+                    (r, q, c) -> c.equal(
+                            r.get("flgBuoniCeliaci"),  filter.getFlgBuoniCeliaci()));
         }
         if (filter.getVersion() != null) {
             specifications.add((r, q, c) -> c.equal(r.get("version"), filter.getVersion()));

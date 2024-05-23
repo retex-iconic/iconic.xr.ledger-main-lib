@@ -8,8 +8,8 @@ public class TabTipiPagamentoIndexUkDTO extends AggregateIndexUkBaseDTO {
     public TabTipiPagamentoIndexUkDTO() {
     }
 
-    public static String getUk(TabTipiPagamentoBaseDTO tabTipiPagamentoBaseDTO) {
-        String uk = tabTipiPagamentoBaseDTO.getCodTipoPag().toString();
+    public static Integer getUk(TabTipiPagamentoBaseDTO tabTipiPagamentoBaseDTO) {
+        Integer uk = tabTipiPagamentoBaseDTO.getCodTipoPag();
         return uk;
     }
 
