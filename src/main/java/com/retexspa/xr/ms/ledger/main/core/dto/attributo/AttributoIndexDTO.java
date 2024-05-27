@@ -1,4 +1,4 @@
-package com.retexspa.xr.ms.ledger.main.core.attributo;
+package com.retexspa.xr.ms.ledger.main.core.dto.attributo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
