@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.retexspa.xr.ms.ledger.main.core.dto.BaseDTO;
 import com.retexspa.xr.ms.main.core.dto.Enums;
-import com.retexspa.xr.ms.main.core.dto.attributo.AttributoBaseDTO;
 import com.retexspa.xr.ms.main.core.dto.attributo.AttributoValoreDTO;
 import com.retexspa.xr.ms.main.core.helpers.EnumValidator;
 
@@ -166,11 +165,11 @@ public class TabTipiPagamentoBaseDTO extends BaseDTO {
     }
 
 
-    public static String getAggregate(){
+    public static String getAggregateName(){
         return "TabTipiPagamentoAggregate";
     }
 
-    public static String getAggregateName(){
+    public static String getName(){
         return "TabTipiPagamento";
     }
 }

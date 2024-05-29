@@ -10,6 +10,7 @@ import com.retexspa.xr.ms.main.query.entities.AttributoQueryEntity;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -62,11 +63,16 @@ public class TabTipiPagamentoQueryEntity {
     @Column(name = "version")
     private Long version;
 
+    @EnumValidator(enumClazz = Enums.CheckSN.class, message = "FlgCancellato not valid")
+    private String flgCancellato;
+
+    private LocalDateTime dataCancellazione;
 
     public TabTipiPagamentoQueryEntity() {
     }
 
-    public TabTipiPagamentoQueryEntity(@NonNull String id, TabTipiPagamentoBaseDTO tabTipiPagamentoBaseDTO) {
+    public TabTipiPagamentoQueryEntity(@NonNull String id, TabTipiPagamentoBaseDTO tabTipiPagamentoBaseDTO,
+                                       Long version) {
         this.id = id;
         this.codTipoPag = tabTipiPagamentoBaseDTO.getCodTipoPag();
         this.desTipoPagb = tabTipiPagamentoBaseDTO.getDesTipoPagb();
@@ -80,6 +86,7 @@ public class TabTipiPagamentoQueryEntity {
         this.flgBuoniDay = tabTipiPagamentoBaseDTO.getFlgBuoniDay();
         this.flgFatturaPagata = tabTipiPagamentoBaseDTO.getFlgFatturaPagata();
         this.flgBuoniCeliaci = tabTipiPagamentoBaseDTO.getFlgBuoniCeliaci();
+        this.version = version;
     }
 
     @NonNull
@@ -201,5 +208,21 @@ public class TabTipiPagamentoQueryEntity {
 
     public void setTabTipiPagamentoAttributi(Set<TabTipiPagamentoAttributoQueryEntity> tabTipiPagamentoAttributi) {
         this.tabTipiPagamentoAttributi = tabTipiPagamentoAttributi;
+    }
+
+    public String getFlgCancellato() {
+        return flgCancellato;
+    }
+
+    public void setFlgCancellato(String flgCancellato) {
+        this.flgCancellato = flgCancellato;
+    }
+
+    public LocalDateTime getDataCancellazione() {
+        return dataCancellazione;
+    }
+
+    public void setDataCancellazione(LocalDateTime dataCancellazione) {
+        this.dataCancellazione = dataCancellazione;
     }
 }

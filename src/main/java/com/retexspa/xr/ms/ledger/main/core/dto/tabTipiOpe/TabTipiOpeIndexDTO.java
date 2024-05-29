@@ -14,6 +14,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class TabTipiOpeIndexDTO {
+
     private String tabTipiOpeId;
     private LinkedList<String> tabOpePagIds;
     public TabTipiOpeIndexDTO() {
