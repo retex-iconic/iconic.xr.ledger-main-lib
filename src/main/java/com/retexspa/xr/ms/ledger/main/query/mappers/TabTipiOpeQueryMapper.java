@@ -1,6 +1,6 @@
 package com.retexspa.xr.ms.ledger.main.query.mappers;
 
-import com.retexspa.xr.ms.ledger.main.core.entites.TabTipiOpeQueryDTO;
+import com.retexspa.xr.ms.ledger.main.core.entities.TabTipiOpeQueryDTO;
 import com.retexspa.xr.ms.ledger.main.query.entities.TabTipiOpeQueryEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -25,6 +25,7 @@ public interface TabTipiOpeQueryMapper {
     @Mapping(target = "flgServizio", source = "flgServizio")
     @Mapping(target = "flgUfficio", source = "flgUfficio")
     @Mapping(target = "flgCancellato", source = "flgCancellato")
+    @Mapping(target = "dataCancellazione", source = "dataCancellazione")
     @Mapping(target = "version", source = "version")
     TabTipiOpeQueryDTO toDTO(TabTipiOpeQueryEntity tabTipiOpeQueryEntity);
 }

@@ -13,7 +13,7 @@ import java.util.UUID;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Getter
 @Setter
-public class TabTipiOpeIndexDTO {
+public class   TabTipiOpeIndexDTO {
 
     private String tabTipiOpeId;
     private LinkedList<String> tabOpePagIds;
@@ -26,7 +26,7 @@ public class TabTipiOpeIndexDTO {
     public static String getIdFromTabTipiOpe(String tabTipiOpeId) {
         return UUID.nameUUIDFromBytes(("/TabTipiOpeIndex/" + tabTipiOpeId).getBytes()).toString();
     }
-    public static String getDetailNameabTabOpePag() {
+    public static String getDetailNameTabOpePag() {
         return "tabOpePagIds";
     }
 }

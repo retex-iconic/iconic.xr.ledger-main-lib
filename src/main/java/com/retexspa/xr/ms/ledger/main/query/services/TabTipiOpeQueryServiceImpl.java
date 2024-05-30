@@ -1,6 +1,6 @@
 package com.retexspa.xr.ms.ledger.main.query.services;
 
-import com.retexspa.xr.ms.ledger.main.core.entites.TabTipiOpeQueryDTO;
+import com.retexspa.xr.ms.ledger.main.core.entities.TabTipiOpeQueryDTO;
 import com.retexspa.xr.ms.ledger.main.core.filterRequest.TabTipiOpeFilter;
 import com.retexspa.xr.ms.ledger.main.core.responses.tabTipiOpe.TabTipiOpeResponse;
 import com.retexspa.xr.ms.ledger.main.query.entities.TabTipiOpeQueryEntity;
@@ -72,6 +72,8 @@ public class TabTipiOpeQueryServiceImpl implements  TabTipiOpeQueryService {
                     case "flgUfficio":
                         break;
                     case "flgCancellato":
+                        break;
+                    case "dataCancellazione" :
                         break;
                     case "version":
                         break;
@@ -163,6 +165,10 @@ public class TabTipiOpeQueryServiceImpl implements  TabTipiOpeQueryService {
             specifications.add(
                     (r, q, c) -> c.like(
                             c.upper(r.get("flgCancellato")), "%" + filter.getFlgCancellato().toUpperCase() + "%"));
+        }
+        if (filter.getDataCancellazione() != null) {
+            specifications.add(
+                    (r, q, c) -> c.equal(r.get("dataCancellazione"), filter.getDataCancellazione()));
         }
         if (filter.getVersion() != null) {
             specifications.add((r, q, c) -> c.equal(r.get("version"), filter.getVersion()));

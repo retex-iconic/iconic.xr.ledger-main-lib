@@ -1,4 +1,4 @@
-package com.retexspa.xr.ms.ledger.main.core.entites;
+package com.retexspa.xr.ms.ledger.main.core.entities;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
+
+import java.time.LocalDateTime;
 
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
@@ -29,5 +31,6 @@ public class TabTipiOpeQueryDTO {
     private String flgServizio;
     private String flgUfficio;
     private String flgCancellato;
+    private LocalDateTime dataCancellazione;
     private Long version;
 }

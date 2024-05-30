@@ -1,6 +1,6 @@
 package com.retexspa.xr.ms.ledger.main.query.mappers;
 
-import com.retexspa.xr.ms.ledger.main.core.entites.TabTipiPagamentoQueryDTO;
+import com.retexspa.xr.ms.ledger.main.core.entities.TabTipiPagamentoQueryDTO;
 import com.retexspa.xr.ms.ledger.main.query.entities.TabTipiPagamentoQueryEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
