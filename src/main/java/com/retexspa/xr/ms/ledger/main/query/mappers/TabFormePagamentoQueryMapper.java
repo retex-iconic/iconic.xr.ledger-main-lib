@@ -9,6 +9,8 @@ import org.mapstruct.Mapping;
 import org.mapstruct.NullValueMappingStrategy;
 import org.mapstruct.factory.Mappers;
 
+import java.time.LocalDateTime;
+
 @Mapper(componentModel = "spring", nullValueMappingStrategy = NullValueMappingStrategy.RETURN_NULL)
 public interface TabFormePagamentoQueryMapper {
     TabFormePagamentoQueryMapper INSTANCE = Mappers.getMapper(TabFormePagamentoQueryMapper.class);
@@ -34,5 +36,7 @@ public interface TabFormePagamentoQueryMapper {
     @Mapping(target = "livMinTot", source = "livMinTot")
     @Mapping(target = "idTipoPagamento", source = "tipoPagamento.id")
     @Mapping(target = "version", source = "version")
+    @Mapping(target = "dataCancellazione", source = "dataCancellazione")
+    @Mapping(target = "flgCancellato", source = "flgCancellato")
     TabFormePagamentoQueryDTO toDTO(TabFormePagamentoQueryEntity tabFormePagaamentoQueryEntity);
 }

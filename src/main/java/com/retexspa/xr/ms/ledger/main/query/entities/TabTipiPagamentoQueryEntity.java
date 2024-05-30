@@ -87,6 +87,7 @@ public class TabTipiPagamentoQueryEntity {
         this.flgFatturaPagata = tabTipiPagamentoBaseDTO.getFlgFatturaPagata();
         this.flgBuoniCeliaci = tabTipiPagamentoBaseDTO.getFlgBuoniCeliaci();
         this.version = version;
+        this.flgCancellato = tabTipiPagamentoBaseDTO.getFlgCancellato();
     }
 
     @NonNull

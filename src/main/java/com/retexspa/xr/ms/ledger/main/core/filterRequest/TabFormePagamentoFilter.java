@@ -6,6 +6,7 @@ import com.retexspa.xr.ms.main.core.helpers.EnumValidator;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 
 @Getter
@@ -43,6 +44,9 @@ public class TabFormePagamentoFilter {
 
     private Long version;
 
+    private String flgCancellato;
+
+    private LocalDateTime dataCancellazione;
     public TabFormePagamentoFilter() {
     }
 
@@ -67,7 +71,9 @@ public class TabFormePagamentoFilter {
             @JsonProperty("agg04Lun") Integer agg04Lun,
             @JsonProperty("agg04Des") String agg04Des,
             @JsonProperty("livMinTot") String livMinTot,
-            @JsonProperty("version") Long version) {
+            @JsonProperty("version") Long version,
+            @JsonProperty("flgCancellato") String flgCancellato,
+            @JsonProperty("dataCancellazione") LocalDateTime dataCancellazione) {
         this.id = id;
         this.codForPag = codForPag;
         this.idTipoPagamento = idTipoPagamento;
@@ -89,6 +95,8 @@ public class TabFormePagamentoFilter {
         this.agg04Des = agg04Des;
         this.livMinTot = livMinTot;
         this.version = version;
+        this.flgCancellato= flgCancellato;
+        this.dataCancellazione=dataCancellazione;
     }
 
     public static TabFormePagamentoFilter createFilterFromMap(Object obj) {
@@ -171,6 +179,8 @@ public class TabFormePagamentoFilter {
             filter.setAgg04Des((String) map.get("agg04Des"));
             filter.setLivMinTot((String) map.get("livMinTot"));
 
+            filter.setFlgCancellato((String) map.get("flgCancellato"));
+            filter.setDataCancellazione((LocalDateTime) map.get("dataCancellazione"));
             Object version = map.get("version");
         if (version != null) {
             if (version instanceof Integer) {

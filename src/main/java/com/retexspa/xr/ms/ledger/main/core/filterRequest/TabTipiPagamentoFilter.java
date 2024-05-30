@@ -5,7 +5,9 @@ import com.retexspa.xr.ms.main.core.dto.Enums;
 import com.retexspa.xr.ms.main.core.dto.attributo.AttributoBaseDTO;
 import com.retexspa.xr.ms.main.core.filterRequest.AttributoFilter;
 import com.retexspa.xr.ms.main.core.helpers.EnumValidator;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -33,6 +35,8 @@ public class TabTipiPagamentoFilter {
     @EnumValidator(enumClazz = Enums.CheckSN.class)
     private String flgBuoniCeliaci;
     private Long version;
+    private String flgCancellato;
+    private LocalDateTime dataCancellazione;
 
     public TabTipiPagamentoFilter() {
     }
@@ -50,7 +54,9 @@ public class TabTipiPagamentoFilter {
                                   @JsonProperty("flgBuoniDay") String flgBuoniDay,
                                   @JsonProperty("flgFatturaPagata") String flgFatturaPagata,
                                   @JsonProperty("flgBuoniCeliaci") String flgBuoniCeliaci,
-                                  @JsonProperty("version") Long version) {
+                                  @JsonProperty("version") Long version,
+                                  @JsonProperty("flgCancellato") String flgCancellato,
+                                  @JsonProperty("dataCancellazione") LocalDateTime dataCancellazione) {
         this.id = id;
         this.codTipoPag = codTipoPag;
         this.desTipoPagb = desTipoPagb;
@@ -65,6 +71,8 @@ public class TabTipiPagamentoFilter {
         this.flgFatturaPagata = flgFatturaPagata;
         this.flgBuoniCeliaci = flgBuoniCeliaci;
         this.version = version;
+        this.flgCancellato= flgCancellato;
+        this.dataCancellazione=dataCancellazione;
     }
 
     public static TabTipiPagamentoFilter createFilterFromMap(Object obj) {
@@ -90,6 +98,8 @@ public class TabTipiPagamentoFilter {
         filter.setFlgBuoniDay((String) map.get("flgBuoniDay"));
         filter.setFlgFatturaPagata((String) map.get("flgFatturaPagata"));
         filter.setFlgBuoniCeliaci((String) map.get("flgBuoniCeliaci"));
+        filter.setFlgCancellato((String) map.get("flgCancellato"));
+        filter.setDataCancellazione((LocalDateTime) map.get("dataCancellazione"));
         Object version = map.get("version");
         if (version != null) {
             if (version instanceof Integer) {
@@ -100,6 +110,22 @@ public class TabTipiPagamentoFilter {
         }
         }
         return filter;
+    }
+
+    public String getFlgCancellato() {
+        return flgCancellato;
+    }
+
+    public void setFlgCancellato(String flgCancellato) {
+        this.flgCancellato = flgCancellato;
+    }
+
+    public LocalDateTime getDataCancellazione() {
+        return dataCancellazione;
+    }
+
+    public void setDataCancellazione(LocalDateTime dataCancellazione) {
+        this.dataCancellazione = dataCancellazione;
     }
 
     public String getId() {
