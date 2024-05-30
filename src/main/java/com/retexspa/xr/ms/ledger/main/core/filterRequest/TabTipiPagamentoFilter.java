@@ -75,9 +75,7 @@ public class TabTipiPagamentoFilter {
             Object codTipoPag = map.get("codTipoPag");
             if (codTipoPag != null) {
                 if (codTipoPag instanceof Integer) {
-                    filter.setCodTipoPag(Integer.valueOf((Integer) codTipoPag));
-                } else if (codTipoPag instanceof Long) {
-                    filter.setVersion((Long) codTipoPag);
+                    filter.setCodTipoPag((Integer) codTipoPag);
                 }
             }
 

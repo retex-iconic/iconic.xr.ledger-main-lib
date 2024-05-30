@@ -1,4 +1,4 @@
-package com.retexspa.xr.ms.ledger.main.core.entities;
+package com.retexspa.xr.ms.ledger.main.core.entites;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;

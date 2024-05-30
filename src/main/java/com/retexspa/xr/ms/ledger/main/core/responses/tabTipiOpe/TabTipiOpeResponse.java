@@ -1,6 +1,6 @@
-package com.retexspa.xr.ms.ledger.main.core.responses;
+package com.retexspa.xr.ms.ledger.main.core.responses.tabTipiOpe;
 
-import com.retexspa.xr.ms.ledger.main.core.entities.TabTipiOpeQueryDTO;
+import com.retexspa.xr.ms.ledger.main.core.entites.TabTipiOpeQueryDTO;
 import com.retexspa.xr.ms.main.core.responses.BasePaginationResponse;
 
 

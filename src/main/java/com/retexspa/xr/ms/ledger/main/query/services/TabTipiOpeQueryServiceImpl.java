@@ -1,8 +1,8 @@
 package com.retexspa.xr.ms.ledger.main.query.services;
 
-import com.retexspa.xr.ms.ledger.main.core.entities.TabTipiOpeQueryDTO;
+import com.retexspa.xr.ms.ledger.main.core.entites.TabTipiOpeQueryDTO;
 import com.retexspa.xr.ms.ledger.main.core.filterRequest.TabTipiOpeFilter;
-import com.retexspa.xr.ms.ledger.main.core.responses.TabTipiOpeResponse;
+import com.retexspa.xr.ms.ledger.main.core.responses.tabTipiOpe.TabTipiOpeResponse;
 import com.retexspa.xr.ms.ledger.main.query.entities.TabTipiOpeQueryEntity;
 import com.retexspa.xr.ms.ledger.main.query.mappers.TabTipiOpeQueryMapper;
 import com.retexspa.xr.ms.ledger.main.query.repositories.TabTipiOpeRepository;

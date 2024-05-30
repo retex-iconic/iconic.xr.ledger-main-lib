@@ -13,9 +13,11 @@ public class AttributoIndexDTO extends com.retexspa.xr.ms.main.core.dto.attribut
 
     public AttributoIndexDTO() {
     }
+
     public AttributoIndexDTO(String attributoId) {
         super(attributoId);
     }
+
     public LinkedList<String> getTabTipiOpeIds() {
         return tabTipiOpeIds;
     }
@@ -39,4 +41,8 @@ public class AttributoIndexDTO extends com.retexspa.xr.ms.main.core.dto.attribut
     public static String getDetailNameTabTipiPagamento() {
         return "TabTipiPagamento";
     }
+
+    public static String getDetailNameTabFormePagamento() { return "TabFormePagamento"; }
+
+
 }

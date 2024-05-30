@@ -1,4 +1,4 @@
-package com.retexspa.xr.ms.ledger.main.core.responses;
+package com.retexspa.xr.ms.ledger.main.core.responses.tabTipiOpe;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.retexspa.xr.ms.ledger.main.core.dto.tabTipiOpe.TabTipiOpeBaseDTO;
