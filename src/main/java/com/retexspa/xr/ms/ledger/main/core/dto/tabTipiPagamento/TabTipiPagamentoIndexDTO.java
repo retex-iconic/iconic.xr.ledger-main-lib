@@ -37,17 +37,8 @@ public class TabTipiPagamentoIndexDTO {
         this.tabTipiPagamentoId = tabTipiPagamentoId;
     }
 
-    public static String getDetailNameTabTipiPagamento() {
-        return "TabTipiPagamento";
-    }
 
-    public static String getDetailNameTabTipiPagamento2() {
-        return "Tab Tipi Pagamento";
-    }
 
-    public static String getDetailNameTabTipiPagamentoAggregate() {
-        return "TabTipiPagamentoAggregate";
-    }
 
     public LinkedList<String> getTabFormePagamentoIds() {
         return tabFormePagamentoIds;

@@ -1,4 +1,4 @@
-package com.retexspa.xr.ms.ledger.main.core.responses.tabTipiPagamentoAggregate;
+package com.retexspa.xr.ms.ledger.main.core.responses.tabTipiPagamento;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.retexspa.xr.ms.ledger.main.core.dto.tabTipiPagamento.TabTipiPagamentoBaseDTO;

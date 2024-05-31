@@ -1,8 +1,8 @@
 package com.retexspa.xr.ms.ledger.main.query.services;
 
-import com.retexspa.xr.ms.ledger.main.core.entites.TabTipiPagamentoQueryDTO;
+import com.retexspa.xr.ms.ledger.main.core.entities.TabTipiPagamentoQueryDTO;
 import com.retexspa.xr.ms.ledger.main.core.filterRequest.TabTipiPagamentoFilter;
-import com.retexspa.xr.ms.ledger.main.core.responses.tabTipiPagamentoAggregate.TabTipiPagamentoResponse;
+import com.retexspa.xr.ms.ledger.main.core.responses.tabTipiPagamento.TabTipiPagamentoResponse;
 import com.retexspa.xr.ms.ledger.main.query.entities.TabTipiPagamentoQueryEntity;
 import com.retexspa.xr.ms.ledger.main.query.mappers.TabTipiPagamentoQueryMapper;
 import com.retexspa.xr.ms.ledger.main.query.repositories.TabTipiPagamentoRepository;

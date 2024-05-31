@@ -1,6 +1,6 @@
 package com.retexspa.xr.ms.ledger.main.query.services;
 
-import com.retexspa.xr.ms.ledger.main.core.entites.TabFormePagamentoQueryDTO;
+import com.retexspa.xr.ms.ledger.main.core.entities.TabFormePagamentoQueryDTO;
 import com.retexspa.xr.ms.ledger.main.core.filterRequest.TabFormePagamentoFilter;
 import com.retexspa.xr.ms.ledger.main.core.responses.tabFormePagamento.TabFormePagamentoResponse;
 import com.retexspa.xr.ms.ledger.main.query.entities.TabFormePagamentoQueryEntity;

@@ -1,9 +1,7 @@
 package com.retexspa.xr.ms.ledger.main.query.mappers;
 
-import com.retexspa.xr.ms.ledger.main.core.entites.TabFormePagamentoQueryDTO;
-import com.retexspa.xr.ms.ledger.main.core.entites.TabTipiOpeQueryDTO;
+import com.retexspa.xr.ms.ledger.main.core.entities.TabFormePagamentoQueryDTO;
 import com.retexspa.xr.ms.ledger.main.query.entities.TabFormePagamentoQueryEntity;
-import com.retexspa.xr.ms.ledger.main.query.entities.TabTipiOpeQueryEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValueMappingStrategy;

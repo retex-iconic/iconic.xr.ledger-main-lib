@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -41,6 +42,8 @@ public class TabTipiOpeQueryEntity {
     private String flgUfficio;
     @Column(name = "flgCancellato")
     private String flgCancellato;
+    @Column(name = "data_cancellazione")
+    private LocalDateTime dataCancellazione;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "tabTipiOpe")
     @JsonIgnore
     private List<TabTipiOpeAttributoQueryEntity> attributi;
@@ -66,7 +69,7 @@ public class TabTipiOpeQueryEntity {
         this.flgVersamento = data.getFlgVersamento();
         this.flgServizio = data.getFlgServizio();
         this.flgUfficio = data.getFlgUfficio();
-        this.flgCancellato = getFlgCancellato();
+        this.flgCancellato = data.getFlgCancellato();
         this.version =version;
     }
 }

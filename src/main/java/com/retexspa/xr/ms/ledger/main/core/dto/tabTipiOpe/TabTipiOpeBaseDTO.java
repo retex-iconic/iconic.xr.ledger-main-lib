@@ -11,6 +11,8 @@ import com.retexspa.xr.ms.main.core.helpers.EnumValidator;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.UUID;
@@ -25,6 +27,8 @@ public class TabTipiOpeBaseDTO extends BaseDTO {
     private Integer codTipope;
 
     @NotNull(message = "desTipopeB is mandatory")
+    @NotEmpty(message = "desTipopeB is mandatory")
+    @NotBlank(message = "desTipopeB is mandatory")
     private String desTipopeB;
 
     private String desTipopeL;
@@ -69,5 +73,12 @@ public class TabTipiOpeBaseDTO extends BaseDTO {
     @JsonIgnore
     public String getAggregateId() {
         return UUID.randomUUID().toString();
+    }
+    public static String getAggregateName(){
+        return "TabTipiOpeAggregate";
+    }
+
+    public static String getName(){
+        return "TabTipiOpe";
     }
 }
