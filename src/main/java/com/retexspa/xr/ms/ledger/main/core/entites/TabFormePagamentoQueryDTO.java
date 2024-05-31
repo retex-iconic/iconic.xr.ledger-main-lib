@@ -9,6 +9,7 @@ import org.mapstruct.ReportingPolicy;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -42,6 +43,9 @@ public class TabFormePagamentoQueryDTO {
     private String livMinTot;
     private Long version;
 
+    private String flgCancellato;
+
+    private LocalDateTime dataCancellazione;
     public String getId() {
         return id;
     }
@@ -208,5 +212,21 @@ public class TabFormePagamentoQueryDTO {
 
     public void setVersion(Long version) {
         this.version = version;
+    }
+
+    public String getFlgCancellato() {
+        return flgCancellato;
+    }
+
+    public void setFlgCancellato(String flgCancellato) {
+        this.flgCancellato = flgCancellato;
+    }
+
+    public LocalDateTime getDataCancellazione() {
+        return dataCancellazione;
+    }
+
+    public void setDataCancellazione(LocalDateTime dataCancellazione) {
+        this.dataCancellazione = dataCancellazione;
     }
 }

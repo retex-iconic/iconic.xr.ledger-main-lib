@@ -7,6 +7,7 @@ import com.retexspa.xr.ms.main.core.dto.attributo.AttributoBaseDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
@@ -28,7 +29,9 @@ public class TabTipiPagamentoQueryDTO {
     private String flgFatturaPagata;
     private String flgBuoniCeliaci;
     private Long version;
+    private String flgCancellato;
 
+    private LocalDateTime dataCancellazione;
     public String getId() {
         return id;
     }
@@ -139,5 +142,21 @@ public class TabTipiPagamentoQueryDTO {
 
     public void setFlgBuoniCeliaci(String flgBuoniCeliaci) {
         this.flgBuoniCeliaci = flgBuoniCeliaci;
+    }
+
+    public String getFlgCancellato() {
+        return flgCancellato;
+    }
+
+    public void setFlgCancellato(String flgCancellato) {
+        this.flgCancellato = flgCancellato;
+    }
+
+    public LocalDateTime getDataCancellazione() {
+        return dataCancellazione;
+    }
+
+    public void setDataCancellazione(LocalDateTime dataCancellazione) {
+        this.dataCancellazione = dataCancellazione;
     }
 }

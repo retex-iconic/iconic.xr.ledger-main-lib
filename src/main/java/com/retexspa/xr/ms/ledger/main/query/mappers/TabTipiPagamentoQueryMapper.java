@@ -25,6 +25,8 @@ public interface TabTipiPagamentoQueryMapper {
     @Mapping(target = "flgFatturaPagata", source = "flgFatturaPagata")
     @Mapping(target = "flgBuoniCeliaci", source = "flgBuoniCeliaci")
     @Mapping(target = "version", source = "version")
+    @Mapping(target = "dataCancellazione", source = "dataCancellazione")
+    @Mapping(target = "flgCancellato", source = "flgCancellato")
     TabTipiPagamentoQueryDTO toDTO(TabTipiPagamentoQueryEntity tabTipiPagamentoQueryEntity);
 
 }

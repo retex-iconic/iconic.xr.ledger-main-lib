@@ -10,6 +10,7 @@ public class AttributoIndexDTO extends com.retexspa.xr.ms.main.core.dto.attribut
     // DONE IN INDEXAGGREGATE AND EVENTHANDLER
     private LinkedList<String> tabTipiOpeIds;
     private LinkedList<String> tabTipiPagamentoIds;
+    private LinkedList<String> tabFormePagamentoIds;
 
     public AttributoIndexDTO() {
     }
@@ -32,6 +33,14 @@ public class AttributoIndexDTO extends com.retexspa.xr.ms.main.core.dto.attribut
 
     public void setTabTipiPagamentoIds(LinkedList<String> tabTipiPagamentoIds) {
         this.tabTipiPagamentoIds = tabTipiPagamentoIds;
+    }
+
+    public LinkedList<String> getTabFormePagamentoIds() {
+        return tabFormePagamentoIds;
+    }
+
+    public void setTabFormePagamentoIds(LinkedList<String> tabFormePagamentoIds) {
+        this.tabFormePagamentoIds = tabFormePagamentoIds;
     }
 
     public static String getDetailNameTabTipiOpe() {
