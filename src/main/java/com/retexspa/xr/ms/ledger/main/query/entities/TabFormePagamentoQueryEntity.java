@@ -102,5 +102,6 @@ public class TabFormePagamentoQueryEntity {
         this.agg04Des = tabFormePagamentoBaseDTO.getAgg04Des();
         this.livMinTot = tabFormePagamentoBaseDTO.getLivMinTot();
         this.version = version;
+        this.setFlgCancellato(tabFormePagamentoBaseDTO.getFlgCancellato());
     }
 }
