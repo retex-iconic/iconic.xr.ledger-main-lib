@@ -12,7 +12,7 @@ public class AttributoIndexDTO extends com.retexspa.xr.ms.main.core.dto.attribut
     private LinkedList<String> tabTipiPagamentoIds;
     private LinkedList<String> tabOpePagIds;
     private LinkedList<String> tabFormePagamentoIds;
-
+    private LinkedList<String> regTestDistintaFinIds;
     public AttributoIndexDTO() {
     }
 
@@ -52,7 +52,14 @@ public class AttributoIndexDTO extends com.retexspa.xr.ms.main.core.dto.attribut
     public void setTabOpePagIds(LinkedList<String> tabOpePagIds) {
         this.tabOpePagIds = tabOpePagIds;
     }
-  
+
+    public LinkedList<String> getRegTestDistintaFinIds() {
+        return regTestDistintaFinIds;
+    }
+
+    public void setRegTestDistintaFinIds(LinkedList<String> regTestDistintaFinIds) {
+        this.regTestDistintaFinIds = regTestDistintaFinIds;
+    }
 
     public static String getDetailNameTabTipiOpe() {
         return "TabTipiOpe";
@@ -66,6 +73,6 @@ public class AttributoIndexDTO extends com.retexspa.xr.ms.main.core.dto.attribut
     }
 
     public static String getDetailNameTabFormePagamento() { return "TabFormePagamento"; }
-
+    public static String getDetailNameRegTestDistintaFin() { return "RegTestDistintaFin"; }
 
 }
