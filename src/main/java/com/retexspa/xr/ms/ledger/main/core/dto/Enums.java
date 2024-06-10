@@ -11,4 +11,20 @@ public class Enums extends com.retexspa.xr.ms.main.core.dto.Enums  {
         P,
         N
     }
+
+    public enum Segno {
+        PLUS("+"),
+        MINUS("-");
+        private final String symbol;
+        Segno(String symbol) {
+            this.symbol = symbol;
+        }
+        public String getSymbol() {
+            return symbol;
+        }
+        @Override
+        public String toString() {
+            return this.symbol;
+        }
+    }
 }

@@ -16,6 +16,7 @@ public interface RegRigheChiusureOpeQueryMapper {
     @Mapping(target = "desRigaB", source = "desRigaB")
     @Mapping(target = "desRigaL", source = "desRigaL")
     @Mapping(target = "flgCancellato", source = "flgCancellato")
+    @Mapping(target = "dataCancellazione", source = "dataCancellazione")
     @Mapping(target = "version", source = "version")
     RegRigheChiusureOpeQueryDTO toDTO(RegRigheChiusureOpeQueryEntity regRigheChiusureOpeQueryEntity);
 }
