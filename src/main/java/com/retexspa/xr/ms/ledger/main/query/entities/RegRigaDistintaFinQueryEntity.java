@@ -19,7 +19,7 @@ public class RegRigaDistintaFinQueryEntity {
     @JoinColumn(name = "id_riga_dist_fin", referencedColumnName = "id")
     private RegTestDistintaFinQueryEntity rigaDistFin;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_ ope_pag", referencedColumnName = "id")
+    @JoinColumn(name = "id_ope_pag", referencedColumnName = "id")
     private TabOpePagQueryEntity opePag;
     @Column(name = "segno")
     private String segno;

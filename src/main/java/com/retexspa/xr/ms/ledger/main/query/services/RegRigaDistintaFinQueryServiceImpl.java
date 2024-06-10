@@ -40,9 +40,11 @@ public class RegRigaDistintaFinQueryServiceImpl implements RegRigaDistintaFinQue
                         break;
 
                     case "idRigaDistFin":
+                        baseSort.setOrderBy("rigaDistFinId");
                         break;
 
                     case "idOpePag":
+                        baseSort.setOrderBy("opePagId");
                         break;
 
                     case "segno":
@@ -64,13 +66,13 @@ public class RegRigaDistintaFinQueryServiceImpl implements RegRigaDistintaFinQue
                                 ? (baseSort.getOrderType().equalsIgnoreCase("ASC") ? Sort.Direction.ASC
                                 : Sort.Direction.DESC)
                                 : Sort.Direction.ASC),
-                        (baseSort.getOrderBy() != null ? baseSort.getOrderBy() : "idRigaDistFin"));
+                        (baseSort.getOrderBy() != null ? baseSort.getOrderBy() : "id"));
 
                 sorts.add(sort);
             }
         }
         if (sorts.size() == 0) {
-            sorts.add(new Sort.Order(Sort.Direction.ASC, "idRigaDistFin"));
+            sorts.add(new Sort.Order(Sort.Direction.ASC, "id"));
         }
 
         Pageable pageable = PageRequest.of(query.getPage(), query.getLimit(), Sort.by(sorts));

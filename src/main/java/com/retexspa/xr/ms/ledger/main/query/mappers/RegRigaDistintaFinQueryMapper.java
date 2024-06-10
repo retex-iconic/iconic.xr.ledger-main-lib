@@ -12,8 +12,8 @@ public interface RegRigaDistintaFinQueryMapper {
     RegRigaDistintaFinQueryMapper INSTANCE = Mappers.getMapper(RegRigaDistintaFinQueryMapper.class);
 
     @Mapping(target = "id", source = "id")
-    @Mapping(target = "idRigaDistFin", source = "idRigaDistFin")
-    @Mapping(target = "idOpePag", source = "idOpePag")
+    @Mapping(target = "idRigaDistFin", source = "rigaDistFin.id")
+    @Mapping(target = "idOpePag", source = "opePag.id")
     @Mapping(target = "segno", source = "segno")
     @Mapping(target = "flgCancellato", source = "flgCancellato")
     @Mapping(target = "dataCancellazione", source = "dataCancellazione")

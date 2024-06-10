@@ -36,7 +36,66 @@ public class TabFormePagamentoQueryServiceImpl implements TabFormePagamentoQuery
 
         if (query.getSort() != null && query.getSort().size() != 0) {
             for (BaseSort baseSort : query.getSort()) {
+                        switch (baseSort.getOrderBy()) {
+                            case "id":
+                                break;
 
+                            case "codForPag":
+                                break;
+
+                            case "desForpagb":
+                                break;
+
+                            case "desForpagl":
+                                break;
+
+                            case "flgAttivo":
+                                break;
+
+                            case "flgCassaforte":
+                                break;
+
+                            case "agg01Pos":
+                                break;
+                            case "agg01Lun":
+                                break;
+                            case "agg01Des":
+                                break;
+
+                            case "agg02Pos":
+                                break;
+
+                            case "agg02Lun":
+                                break;
+
+                            case "agg02Des":
+                                break;
+                            case "agg03Pos":
+                                break;
+                            case "agg03Lun":
+                                break;
+                            case "agg03Des":
+                                break;
+                            case "agg04Pos" :
+                                break;
+                            case "agg04Lun" :
+                                break;
+                            case "agg04Des" :
+                                break;
+                            case "livMinTot" :
+                                break;
+                            case "flgCancellato" :
+                                break;
+                            case "dataCancellazione" :
+                                break;
+                            case "idTipoPagamento" :
+                                baseSort.setOrderBy("tipoPagamentoId");
+                                break;
+                            case "version":
+                                break;
+                            default:
+                                throw new IllegalArgumentException("Order by is not correct");
+                        }
                 Sort.Order sort = new Sort.Order(
                         (baseSort.getOrderType() != null ?
                                 (baseSort.getOrderType().equalsIgnoreCase("ASC") ? Sort.Direction.ASC : Sort.Direction.DESC) :

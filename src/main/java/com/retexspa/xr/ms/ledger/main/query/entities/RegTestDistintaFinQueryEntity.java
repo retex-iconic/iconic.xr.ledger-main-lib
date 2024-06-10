@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "regTestDistinta")
+@Table(name = "regTestDistintaFin")
 @Getter
 @Setter
 public class RegTestDistintaFinQueryEntity {
@@ -19,10 +19,10 @@ public class RegTestDistintaFinQueryEntity {
     @Column(name = "codRiga")
     private Integer codRiga;
 
-    @Column(name = "desRigaB")
+    @Column(name = "desRiga_b")
     private String desRigaB;
 
-    @Column(name = "desRigaL")
+    @Column(name = "desRiga_l")
     private String desRigaL;
 
     @Column(name = "flgVisSoloMov")
@@ -59,7 +59,7 @@ public class RegTestDistintaFinQueryEntity {
     private String flgCancellato;
     @Column(name = "data_cancellazione")
     private LocalDateTime dataCancellazione;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "regTestDistinta")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "regTestDistintaFin")
     @JsonIgnore
     private List<RegTestDistintaFinAttributoQueryEntity> attributi;
     @Column(name = "version")
