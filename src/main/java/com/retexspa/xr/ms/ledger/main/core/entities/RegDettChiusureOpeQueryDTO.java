@@ -15,11 +15,17 @@ import java.time.LocalDateTime;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE)
 @Getter
 @Setter
-public class RegRigheChiusureOpeQueryDTO {
+public class RegDettChiusureOpeQueryDTO {
     private String id;
-    private Integer codRiga;
-    private String desRigaB;
-    private String desRigaL;
+    private String idRigaChiOpe;
+    private String idOpePagC01;
+    private String segnoC01;
+    private String idOpePagC02;
+    private String segnoC02;
+    private String idOpePagC03;
+    private String segnoC03;
+    private String idOpePagC04;
+    private String segnoC04;
     private String flgCancellato;
     private LocalDateTime dataCancellazione;
     private Long version;

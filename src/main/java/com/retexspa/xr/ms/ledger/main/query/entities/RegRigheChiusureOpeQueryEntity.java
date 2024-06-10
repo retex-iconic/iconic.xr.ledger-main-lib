@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "regRigheChiusureOpe")
@@ -26,6 +27,8 @@ public class RegRigheChiusureOpeQueryEntity {
     private String desRigaL;
     @Column(name = "flg_cancellato")
     private String flgCancellato;
+    @Column(name = "data_cancellazione")
+    private LocalDateTime dataCancellazione;
     @Column(name = "version")
     private Long version;
 
