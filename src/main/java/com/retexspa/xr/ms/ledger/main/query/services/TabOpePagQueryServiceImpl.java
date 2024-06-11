@@ -40,9 +40,11 @@ public class TabOpePagQueryServiceImpl implements  TabOpePagQueryService {
                         break;
 
                     case "idFormePagamento":
+                        baseSort.setOrderBy("formePagamentoId");
                         break;
 
                     case "idTipiOpe":
+                        baseSort.setOrderBy("tipiOpeId");
                         break;
 
                     case "desOpepagB":
