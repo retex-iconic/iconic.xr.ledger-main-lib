@@ -1,4 +1,4 @@
-package com.retexspa.xr.ms.ledger.main.core.dto.tabOpePag;
+package com.retexspa.xr.ms.ledger.main.core.dto.regDettChiusureUff;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
@@ -10,6 +10,6 @@ import lombok.Setter;
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @Getter
 @Setter
-public class TabOpePagDTO extends TabOpePagBaseDTO{
+public class RegDettChiusureUffDTO extends RegDettChiusureUffBaseDTO{
     private String id;
 }
