@@ -40,15 +40,18 @@ public class RegDettChiusureUffQueryServiceImpl implements RegDettChiusureUffQue
                         break;
 
                     case "idRigaChiUff":
+                        baseSort.setOrderBy("rigaChiUffId");
                         break;
 
                     case "idOpePagC01":
+                        baseSort.setOrderBy("opePagC01Id");
                         break;
 
                     case "segnoC01":
                         break;
 
                     case "idOpePagC02":
+                        baseSort.setOrderBy("opePagC02Id");
                         break;
 
                     case "segnoC02":
