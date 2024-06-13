@@ -20,6 +20,8 @@ public class TabOpePagIndexDTO {
     private LinkedList<String> regDettChiusureOpe03Ids;
     private LinkedList<String> regDettChiusureOpe04Ids;
     private LinkedList<String> regRigaDistintaFinIds;
+    private LinkedList<String> regDettChiusureUff01Ids;
+    private LinkedList<String> regDettChiusureUff02Ids;
     public TabOpePagIndexDTO() {
     }
 
@@ -43,5 +45,11 @@ public class TabOpePagIndexDTO {
     }
     public static String getDetailNameRegRigaDistintaFin() {
         return "regRigaDistintaFinIds";
+    }
+    public static String getDetailNameRegDettChiusureUff01() {
+        return "regDettChiusureUff01Ids";
+    }
+    public static String getDetailNameRegDettChiusureUff02() {
+        return "regDettChiusureUff02Ids";
     }
 }
