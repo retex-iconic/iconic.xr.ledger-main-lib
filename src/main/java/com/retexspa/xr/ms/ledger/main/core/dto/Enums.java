@@ -27,4 +27,13 @@ public class Enums extends com.retexspa.xr.ms.main.core.dto.Enums  {
             return this.symbol;
         }
     }
+    public enum PadDir {
+        L,
+        R
+    }
+    public enum TipoField{
+    C,
+    N,
+    D
+    }
 }

@@ -14,6 +14,7 @@ public class TabFormePagamentoIndexDTO {
     private String tabFormePagamentoId;
 
     private LinkedList<String> tabOpePagIds;
+    private LinkedList<String> tabGuidaIdeTransazioneIds;
     public TabFormePagamentoIndexDTO() {
     }
 
@@ -41,9 +42,19 @@ public class TabFormePagamentoIndexDTO {
         this.tabOpePagIds = tabOpePagIds;
     }
 
+    public LinkedList<String> getTabGuidaIdeTransazioneIds() {
+        return tabGuidaIdeTransazioneIds;
+    }
+
+    public void setTabGuidaIdeTransazioneIds(LinkedList<String> tabGuidaIdeTransazioneIds) {
+        this.tabGuidaIdeTransazioneIds = tabGuidaIdeTransazioneIds;
+    }
+
     public static String getDetailNameTabOpePag() {
         return "tabOpePagIds";
     }
 
-
+    public static String getDetailNameTabGuidaIdeTransazione() {
+        return "tabGuidaIdeTransazioneIds";
+    }
 }
