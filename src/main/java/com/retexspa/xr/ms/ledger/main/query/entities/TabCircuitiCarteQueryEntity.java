@@ -18,7 +18,7 @@ public class TabCircuitiCarteQueryEntity {
     private String id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private TabFormePagamentoQueryEntity tabFormePagamentoQueryEntity;
+    private TabFormePagamentoQueryEntity tabFormePagamento;
 
     @Column(name = "tipoCarta")
     private String tipoCarta;

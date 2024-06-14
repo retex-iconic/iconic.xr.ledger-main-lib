@@ -5,9 +5,7 @@ import com.retexspa.xr.ms.ledger.main.core.filterRequest.TabCircuitiCarteFilter;
 import com.retexspa.xr.ms.ledger.main.core.responses.tabCircuitiCarte.TabCircuitiCarteResponse;
 import com.retexspa.xr.ms.ledger.main.query.entities.TabCircuitiCarteQueryEntity;
 import com.retexspa.xr.ms.ledger.main.query.mappers.TabCircuitiCarteQueryMapper;
-import com.retexspa.xr.ms.ledger.main.query.mappers.TabOpePagQueryMapper;
 import com.retexspa.xr.ms.ledger.main.query.repositories.TabCircuitiCarteRepository;
-import com.retexspa.xr.ms.ledger.main.query.repositories.TabOpePagRepository;
 import com.retexspa.xr.ms.main.core.queries.BaseSort;
 import com.retexspa.xr.ms.main.core.queries.GenericSearchRequest;
 import com.retexspa.xr.ms.main.core.responses.Pagination;
@@ -78,7 +76,19 @@ public class TabCircuitiCarteQueryServiceImpl implements TabCircuitiCarteQuerySe
         }
 
         if (filter.getIdFormePagamento() != null) {
-            specifications.add((r, q, c) -> c.equal(r.get("formePagamento").get("id"), filter.getIdFormePagamento()));
+            specifications.add((r, q, c) -> c.equal(r.get("tabFormePagamento").get("id"), filter.getIdFormePagamento()));
+        }
+
+        if (filter.getOrdineStampa() != null) {
+            specifications.add((r, q, c) -> c.equal(r.get("ordineStampa"), filter.getOrdineStampa()));
+        }
+
+        if (filter.getTipoCarta() != null) {
+            specifications.add((r, q, c) -> c.like(c.upper(r.get("tipoCarta")), "%" + filter.getTipoCarta() + "%"  ));
+        }
+
+        if (filter.getVersion() != null) {
+            specifications.add((r, q, c) -> c.equal(r.get("version"), filter.getVersion()));
         }
 
 

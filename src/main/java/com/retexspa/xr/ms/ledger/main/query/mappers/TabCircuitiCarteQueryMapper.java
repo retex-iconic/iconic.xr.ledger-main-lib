@@ -13,7 +13,7 @@ public interface TabCircuitiCarteQueryMapper {
     @Mapping(target = "id", source = "id")
     @Mapping(target = "tipoCarta", source = "tipoCarta")
     @Mapping(target = "ordineStampa", source = "ordineStampa")
-    @Mapping(target = "idFormePagamento", source = "tabFormePagamentoQueryEntity.id")
+    @Mapping(target = "idFormePagamento", source = "tabFormePagamento.id")
     @Mapping(target = "version", source = "version")
     TabCircuitiCarteQueryDTO toDTO(TabCircuitiCarteQueryEntity tabCircuitiCarteQueryEntity);
 }
