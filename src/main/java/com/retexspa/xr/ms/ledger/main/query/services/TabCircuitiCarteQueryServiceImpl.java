@@ -44,14 +44,18 @@ public class TabCircuitiCarteQueryServiceImpl implements TabCircuitiCarteQuerySe
                         baseSort.setOrderBy("formePagamentoId");
                         break;
 
-                    case "idTipiOpe":
-                        baseSort.setOrderBy("tipiOpeId");
+                    case "ordineStampa":
+                        baseSort.setOrderBy("ordineStampa");
+                        break;
+
+                    case "tipoCarta":
+                        baseSort.setOrderBy("tipoCarta");
                         break;
 
                     case "version":
                         break;
                     default:
-                        throw new IllegalArgumentException("Order by is not correct");
+                        baseSort.setOrderBy("id");
                 }
                 Sort.Order sort = new Sort.Order(
                         (baseSort.getOrderType() != null
@@ -91,10 +95,6 @@ public class TabCircuitiCarteQueryServiceImpl implements TabCircuitiCarteQuerySe
             specifications.add((r, q, c) -> c.equal(r.get("version"), filter.getVersion()));
         }
 
-
-        if (filter.getVersion() != null) {
-            specifications.add((r, q, c) -> c.equal(r.get("version"), filter.getVersion()));
-        }
         Specification<TabCircuitiCarteQueryEntity> specification = specifications.stream().reduce(Specification::and).orElse(null);
 
         Page<TabCircuitiCarteQueryEntity> page = tabCircuitiCarteRepository.findAll(specification, pageable);
