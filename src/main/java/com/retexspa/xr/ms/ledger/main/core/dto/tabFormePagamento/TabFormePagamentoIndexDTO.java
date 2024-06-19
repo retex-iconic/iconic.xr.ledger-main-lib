@@ -14,6 +14,7 @@ public class TabFormePagamentoIndexDTO {
     private String tabFormePagamentoId;
 
     private LinkedList<String> tabOpePagIds;
+    private LinkedList<String> tabCircuitiCarteIds;
     private LinkedList<String> tabGuidaIdeTransazioneIds;
     public TabFormePagamentoIndexDTO() {
     }
@@ -25,6 +26,7 @@ public class TabFormePagamentoIndexDTO {
     public static String getIdFromTabFormePagamento(String tabFormePagamentoId) {
         return UUID.nameUUIDFromBytes(("/TabFormePagamentoIndex/" + tabFormePagamentoId).getBytes()).toString();
     }
+
 
     public String getTabFormePagamentoId() {
         return tabFormePagamentoId;
@@ -54,6 +56,17 @@ public class TabFormePagamentoIndexDTO {
         return "tabOpePagIds";
     }
 
+    public static String getDetailNameTabCircuitiCarte() {
+        return "tabCircuitiCarteIds";
+    }
+
+    public LinkedList<String> getTabCircuitiCarteIds() {
+        return tabCircuitiCarteIds;
+    }
+
+    public void setTabCircuitiCarteIds(LinkedList<String> tabCircuitiCarteIds) {
+        this.tabCircuitiCarteIds = tabCircuitiCarteIds;
+    }
     public static String getDetailNameTabGuidaIdeTransazione() {
         return "tabGuidaIdeTransazioneIds";
     }

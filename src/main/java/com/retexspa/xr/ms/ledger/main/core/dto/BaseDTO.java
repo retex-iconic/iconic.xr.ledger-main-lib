@@ -20,7 +20,6 @@ public class BaseDTO {
     @Column(name="flg_cancellato")
     @EnumValidator(enumClazz = Enums.CheckSN.class, message = "FlgCancellato not valid")
     private String flgCancellato;
-    private LocalDateTime dataCancellazione;
 
     public String getFlgCancellato() {
         return flgCancellato;
