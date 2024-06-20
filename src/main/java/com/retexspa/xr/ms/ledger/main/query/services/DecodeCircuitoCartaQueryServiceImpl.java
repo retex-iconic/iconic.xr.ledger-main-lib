@@ -69,6 +69,10 @@ public class DecodeCircuitoCartaQueryServiceImpl implements DecodeCircuitoCartaQ
             specifications.add((r, q, c) -> c.equal(r.get("id"), filter.getId()));
         }
 
+        if (filter.getIdTipoCarta() != null) {
+            specifications.add((r, q, c) -> c.equal(r.get("tipoCarta").get("id"), filter.getIdTipoCarta()));
+        }
+
         if (filter.getPrefisso() != null) {
             specifications.add((r, q, c) -> c.like(c.upper(r.get("prefisso")), "%" + filter.getPrefisso() + "%"  ));
         }

@@ -14,5 +14,6 @@ public interface DecodeCircuitoCartaQueryMapper {
     @Mapping(target = "id", source = "id")
     @Mapping(target = "prefisso", source = "prefisso")
     @Mapping(target = "version", source = "version")
+    @Mapping(target = "idTipoCarta", source = "tipoCarta.id")
     DecodeCircuitoCartaQueryDTO toDTO(DecodeCircuitoCartaQueryEntity decodeCircuitoCartaQueryEntity);
 }
