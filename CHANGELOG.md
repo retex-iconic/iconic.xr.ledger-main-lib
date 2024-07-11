@@ -1,5 +1,43 @@
 # Changelog
 
+## 1.0.0 (2024-07-11)
+
+
+### Features
+
+* IXL-49-TAB_TIPI_OPE ([998c027](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/998c02778d8173a22d547675cfa5a48f2aea6aa2))
+* IXL-5-REG_RIGHE_CHIUSURE_OPE ([6fa9150](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/6fa91504e3ff26485648f2db2d06ebbee4f33645))
+* IXL-50 TAB_TIPI_PAGAMENTO ([144583d](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/144583d658fbd4cc7f5e41e4d0eb0854f3b77adb))
+* IXL-50 TAB_TIPI_PAGAMENTO ([097aa94](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/097aa94e26586a922f3dd3b226f9a39f5415b483))
+* IXL-50 TAB_TIPI_PAGAMENTO ([466a1dc](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/466a1dc0729b8fd1aab4ab9d9d1cd5052528a82e))
+* IXL-50 TAB_TIPI_PAGAMENTO ([c3a436a](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/c3a436a19cfffd45d451cfb8a1ccd79a52a064d9))
+* IXL-51-Refactoring-ledger ([d206600](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/d20660055a007bf6798754c03754800b32ab710e))
+* IXL-54-Attributi ([f78237c](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/f78237c954940ba71d8cff4bd1495d19011f6852))
+* IXL-57 TAB_FORME_PAGAMENTO ([3f4e192](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/3f4e1929670b20a1f84f0a91a0945877ee70e747))
+* IXL-57-tab-forme-pagamento ([6e8ab0e](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/6e8ab0ebede0a356ba2138fa2474db4ac7486ed3))
+* IXL-59-TAB_OPE_PAG ([b13d413](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/b13d4139675f227fcf15c7d9f9552712f7bb3d13))
+* IXL-60-REG_DETT_CHIUSURE_OPE ([30fef53](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/30fef53da25d151ca779e07d493545e90061ea3c))
+* IXL-61-REG_RIGHE_CHIUSURE_UFF ([1ed9984](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/1ed9984b6738b58e2289791542f31bcaf93014e8))
+* IXL-62-REG_DETT_CHIUSURE_UFF ([fac43dc](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/fac43dcfb829321da04d6b7b60ea3d43e932c4ef))
+* IXL-66-REGORE-CHIUSURE6DISTINTA-FINANZIARIA ([ee0b6e2](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/ee0b6e2bf3287b0086282d49c557b44f42094024))
+* IXL-83 TAB_CIRCUITO_CARTA ([d7bc66c](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/d7bc66c250261ca22ebfbbe1fb2ac908386ffb64))
+* IXL-83 TAB_CIRCUITO_CARTA ([5197535](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/5197535c54c664f30cc2b71a92f1768768d5b9dd))
+* IXL-83 TAB_CIRCUITO_CARTA ([1b0499f](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/1b0499f6843f6627b2edb5f5f3da5e54a149f06c))
+* IXL-84 DECODE_CIRCUITO_CARTA ([cb7d197](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/cb7d197654274ca965aaddb46ce00a0bb1692e1c))
+* IXL-84 DECODE_CIRCUITO_CARTA ([4d9724a](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/4d9724a56ddb0f5f3c35bb51c7e3aa0bdf998bd2))
+* IXL-85-TAB_GUIDA_IDE_TRANSAZIONE ([ea3eecf](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/ea3eecf7237b5d12eb691cbfa8fb137612d5eafe))
+* IXL-85-TAB_GUIDA_IDE_TRANSAZIONE ([4f6d15e](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/4f6d15e6945fe0ac170ab34f49094553ac115a30))
+* refactoring graphql ([38034b1](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/38034b175b288136d35cf8f808e83e36f067da85))
+* update pom ([38611cc](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/38611ccb63d502876a4ee297026023371cff72c4))
+* update pom ([b2efe99](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/b2efe99c5bd2c293423bc2199faf38b26598d6bf))
+
+
+### Bug Fixes
+
+* IXL-62-REG_DETT_CHIUSURE_UFF: Test & Fix ([016e685](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/016e6856e43e2ff9b7f0f539d54c1a2d49020cbc))
+* IXL-66-add-fixes ([e38f8c2](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/e38f8c2d9d9d4b22a5515cf8b9de9acbd24d26e9))
+* POM maven-compiler-plugin.version ([53c1f5f](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/53c1f5fd2da8d2036be8e178ef1caee6f1ea5dab))
+
 ## 1.0.0 (2024-02-09)
 
 
