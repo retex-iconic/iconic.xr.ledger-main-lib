@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/compare/v1.0.1...v1.0.2) (2024-07-11)
+
+
+### Bug Fixes
+
+* compile POM ([296e623](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/296e6239760711d59b1f38c52ce522b8b38f67e8))
+
 ## [1.0.1](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/compare/v1.0.0...v1.0.1) (2024-07-11)
 
 
