@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.retexspa</groupId>
   <artifactId>xr-ledger-main-lib</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3-SNAPSHOT</version>
   <name>xr-ledger-main-lib</name>
   <description>Iconic XR - Shared Main Lib</description>
  	<properties>
