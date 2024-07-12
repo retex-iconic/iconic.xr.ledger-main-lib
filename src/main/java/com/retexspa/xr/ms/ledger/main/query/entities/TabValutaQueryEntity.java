@@ -1,6 +1,5 @@
 package com.retexspa.xr.ms.ledger.main.query.entities;
 
-import com.retexspa.xr.ms.ledger.main.core.dto.tabCircuitiCarte.TabCircuitiCarteBaseDTO;
 import com.retexspa.xr.ms.ledger.main.core.dto.tabValuta.TabValutaBaseDTO;
 import lombok.Getter;
 import lombok.Setter;
