@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/compare/v1.0.2...v1.0.3) (2024-07-12)
+
+
+### Bug Fixes
+
+* POM lombok-mapstruct-binding.version ([56e2e65](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/56e2e65653d07e21861cdc1707693078c88b9aa0))
+
 ## [1.0.2](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/compare/v1.0.1...v1.0.2) (2024-07-11)
 
 
