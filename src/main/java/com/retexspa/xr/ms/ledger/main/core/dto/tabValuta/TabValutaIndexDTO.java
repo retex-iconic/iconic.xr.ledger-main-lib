@@ -16,6 +16,7 @@ import java.util.UUID;
 public class TabValutaIndexDTO {
 
     private String tabValutaId;
+    private LinkedList<String> tabMonetaIds;
 
     public TabValutaIndexDTO() {
     }
@@ -26,5 +27,9 @@ public class TabValutaIndexDTO {
 
     public static String getIdFromTabValuta(String id) {
         return UUID.nameUUIDFromBytes(("/TabValutaIndex/" + id).getBytes()).toString();
+    }
+
+    public static String getDetailNameTabMoneta() {
+        return "tabMonetaIds";
     }
 }

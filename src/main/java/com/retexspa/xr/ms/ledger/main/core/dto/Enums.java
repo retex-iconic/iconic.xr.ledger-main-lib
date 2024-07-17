@@ -36,4 +36,8 @@ public class Enums extends com.retexspa.xr.ms.main.core.dto.Enums  {
     N,
     D
     }
+
+    public enum TipoMoneta{
+    B, M
+    }
 }
