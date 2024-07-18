@@ -13,6 +13,7 @@ public class AttributoIndexDTO extends com.retexspa.xr.ms.main.core.dto.attribut
     private LinkedList<String> tabOpePagIds;
     private LinkedList<String> tabFormePagamentoIds;
     private LinkedList<String> regTestDistintaFinIds;
+    
     public AttributoIndexDTO() {
     }
 
