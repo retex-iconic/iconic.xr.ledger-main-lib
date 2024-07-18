@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/compare/v1.0.3...v1.0.4) (2024-07-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency com.retexspa:xr-shared-main-lib to v1.4.1 ([1b8de4c](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/commit/1b8de4ca4ff755e240ad42d2ffe233cb9d723bf4))
+
 ## [1.0.3](https://github.com/retex-iconic/iconic.xr.ledger-main-lib/compare/v1.0.2...v1.0.3) (2024-07-12)
 
 
