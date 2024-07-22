@@ -15,7 +15,11 @@ import java.util.UUID;
 public class TabGuidaIdeTransazioneIndexDTO {
     private String tabGuidaIdeTransazioneId;
   /*  private LinkedList<String> ....Ids;*/
-  public TabGuidaIdeTransazioneIndexDTO(String tabGuidaIdeTransazioneId) {
+
+    public TabGuidaIdeTransazioneIndexDTO() {
+    }
+
+    public TabGuidaIdeTransazioneIndexDTO(String tabGuidaIdeTransazioneId) {
       this.tabGuidaIdeTransazioneId = tabGuidaIdeTransazioneId;
   }
     public static String getIdFromTabGuidaIdeTransazione(String tabGuidaIdeTransazioneId) {
