@@ -5,14 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.lang.NonNull;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "regRigheChiusureOpe")
+@Table(name = "regRigheChiusureOpe", uniqueConstraints = { @UniqueConstraint(columnNames = { "cod_riga" }, name = "uk_regRigheChiusureOpe") })
 @Getter
 @Setter
 public class RegRigheChiusureOpeQueryEntity {
