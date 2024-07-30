@@ -9,7 +9,8 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "regRigheChiusureUff")
+@Table(name = "regRigheChiusureUff", uniqueConstraints = {
+        @UniqueConstraint(name = "regRigheChiusureUff_uk", columnNames = {"codRiga"})})
 @Getter
 @Setter
 public class RegRigheChiusureUffQueryEntity {
