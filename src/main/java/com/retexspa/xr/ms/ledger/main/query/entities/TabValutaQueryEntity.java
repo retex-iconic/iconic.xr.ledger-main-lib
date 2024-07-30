@@ -5,15 +5,18 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.lang.NonNull;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tab_valuta")
+@Table(
+        name = "tab_valuta",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "tab_valuta_uk",
+                        columnNames = {"codValuta"})
+        })
 @Getter
 @Setter
 public class TabValutaQueryEntity {
