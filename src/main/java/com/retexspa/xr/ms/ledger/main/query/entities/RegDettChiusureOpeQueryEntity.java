@@ -9,7 +9,11 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "regDettChiusureOpe")
+@Table(name = "regDettChiusureOpe", uniqueConstraints = {
+        @UniqueConstraint(name = "regDettChiusureOpe_uk1", columnNames = {"id_riga_chi_ope", "id_ope_pag_c01"}),
+        @UniqueConstraint(name = "regDettChiusureOpe_uk2", columnNames = {"id_riga_chi_ope", "id_ope_pag_c02"}),
+        @UniqueConstraint(name = "regDettChiusureOpe_uk3", columnNames = {"id_riga_chi_ope", "id_ope_pag_c03"}),
+        @UniqueConstraint(name = "regDettChiusureOpe_uk4", columnNames = {"id_riga_chi_ope", "id_ope_pag_c04"})})
 @Getter
 @Setter
 public class RegDettChiusureOpeQueryEntity {
@@ -18,32 +22,32 @@ public class RegDettChiusureOpeQueryEntity {
     private String id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_riga_chi_ope", referencedColumnName = "id")
+    @JoinColumn(name = "id_riga_chi_ope", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_regDettChiusureOpe_rigaChiOpe"))
     private RegRigheChiusureOpeQueryEntity rigaChiOpe;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_ope_pag_c01", referencedColumnName = "id")
+    @JoinColumn(name = "id_ope_pag_c01", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_regDettChiusureOpe_opePagC01"))
     private TabOpePagQueryEntity opePagC01;
 
     @Column(name = "segno_c01")
     private String segnoC01;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_ope_pag_c02", referencedColumnName = "id")
+    @JoinColumn(name = "id_ope_pag_c02", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_regDettChiusureOpe_opePagC02"))
     private TabOpePagQueryEntity opePagC02;
 
     @Column(name = "segno_c02")
     private String segnoC02;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_ope_pag_c03", referencedColumnName = "id")
+    @JoinColumn(name = "id_ope_pag_c03", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_regDettChiusureOpe_opePagC03"))
     private TabOpePagQueryEntity opePagC03;
 
     @Column(name = "segno_c03")
     private String segnoC03;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_ope_pag_c04", referencedColumnName = "id")
+    @JoinColumn(name = "id_ope_pag_c04", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_regDettChiusureOpe_opePagC04"))
     private TabOpePagQueryEntity opePagC04;
 
     @Column(name = "segno_c04")
