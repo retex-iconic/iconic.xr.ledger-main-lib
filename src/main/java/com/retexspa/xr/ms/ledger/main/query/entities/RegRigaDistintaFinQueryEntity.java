@@ -9,17 +9,19 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "regRigaDistintaFin")
+@Table(name = "regRigaDistintaFin", uniqueConstraints = {
+        @UniqueConstraint(name = "regRigaDistintaFin_uk", columnNames = {"id_riga_dist_fin", "id_ope_pag"})
+})
 @Getter
 @Setter
 public class RegRigaDistintaFinQueryEntity {
     @Id @NonNull private String id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_riga_dist_fin", referencedColumnName = "id")
+    @JoinColumn(name = "id_riga_dist_fin", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_regRigaDistintaFin_rigaDistFin"))
     private RegTestDistintaFinQueryEntity rigaDistFin;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_ope_pag", referencedColumnName = "id")
+    @JoinColumn(name = "id_ope_pag", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_regRigaDistintaFin_opePag"))
     private TabOpePagQueryEntity opePag;
     @Column(name = "segno")
     private String segno;
