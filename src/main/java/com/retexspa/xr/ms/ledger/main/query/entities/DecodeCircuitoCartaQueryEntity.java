@@ -9,7 +9,13 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "DecodeCircuitoCarta")
+@Table(
+        name = "decode_circuito_carta",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "decode_circuito_carta_uk",
+                        columnNames = {"tipo_carta_id", "prefisso"})
+        })
 @Getter
 @Setter
 public class DecodeCircuitoCartaQueryEntity {
@@ -21,6 +27,7 @@ public class DecodeCircuitoCartaQueryEntity {
     private String prefisso;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "tipo_carta_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_decode_circuito_carta_tipo_carta"))
     private TabCircuitiCarteQueryEntity tipoCarta;
 
     @Column(name = "version")
