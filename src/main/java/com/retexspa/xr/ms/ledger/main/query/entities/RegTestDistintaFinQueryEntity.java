@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "regTestDistintaFin")
+@Table(name = "regTestDistintaFin", uniqueConstraints = { @UniqueConstraint(columnNames = { "codRiga" }, name = "uk_regTestDistintaFin") })
 @Getter
 @Setter
 public class RegTestDistintaFinQueryEntity {

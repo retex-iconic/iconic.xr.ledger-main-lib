@@ -5,13 +5,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface RegTestDistintaFinAttributoRepository extends JpaRepository<RegTestDistintaFinAttributoQueryEntity, String>,
         JpaSpecificationExecutor<RegTestDistintaFinAttributoQueryEntity> {
 
 
-    List<RegTestDistintaFinAttributoQueryEntity> findByRegTestDistintaFinIdAndAttributoId(
+    Optional<RegTestDistintaFinAttributoQueryEntity> findByRegTestDistintaFinIdAndAttributoId(
             String id, String attributoId);
+    List<RegTestDistintaFinAttributoQueryEntity> findByRegTestDistintaFinId(String id);
 
     void deleteByRegTestDistintaFinIdAndAttributoId(String id, String attributoId);
 }
