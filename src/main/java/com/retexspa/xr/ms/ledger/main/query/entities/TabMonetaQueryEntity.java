@@ -9,7 +9,13 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tab_moneta")
+@Table(
+        name = "tab_moneta",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "tab_moneta_uk",
+                        columnNames = {"tab_valuta_id", "tipo_moneta", "taglio_cassetto"})
+        })
 @Getter
 @Setter
 public class TabMonetaQueryEntity {
@@ -19,6 +25,7 @@ public class TabMonetaQueryEntity {
     private String id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "tab_valuta_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_tab_moneta_tab_valuta"))
     private TabValutaQueryEntity tabValuta;
     @Column(name = "tipo_moneta")
     private String tipoMoneta;
