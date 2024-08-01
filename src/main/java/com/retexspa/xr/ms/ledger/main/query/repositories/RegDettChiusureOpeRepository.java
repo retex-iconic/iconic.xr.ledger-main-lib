@@ -10,4 +10,8 @@ import java.util.List;
 public interface RegDettChiusureOpeRepository extends JpaRepository<RegDettChiusureOpeQueryEntity, String>,
         JpaSpecificationExecutor<RegDettChiusureOpeQueryEntity> {
    List<RegDettChiusureOpeQueryEntity> findAllByRigaChiOpeId(String rigaChiOpeId);
+   boolean existsByOpePagC01_Id(String tabOpePagId);
+   boolean existsByOpePagC02_Id(String tabOpePagId);
+   boolean existsByOpePagC03_Id(String tabOpePagId);
+   boolean existsByOpePagC04_Id(String tabOpePagId);
 }

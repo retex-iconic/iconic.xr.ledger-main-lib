@@ -13,16 +13,16 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "tabOpePag")
+@Table(name = "tabOpePag", uniqueConstraints = { @UniqueConstraint(columnNames = { "id_tipi_ope","id_forme_pagamento" }, name = "uk_tabOpePag")})
 @Getter
 @Setter
 public class TabOpePagQueryEntity {
     @Id @NonNull private String id;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_forme_pagamento", referencedColumnName = "id")
+    @JoinColumn(name = "id_forme_pagamento", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_tabOpePag_formePagamento"))
      private TabFormePagamentoQueryEntity formePagamento;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_tipi_ope", referencedColumnName = "id")
+    @JoinColumn(name = "id_tipi_ope", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_tabOpePag_tipiOpe"))
      private TabTipiOpeQueryEntity tipiOpe;
     @Column(name = "desOpepag_b")
     private String desOpepagB;
