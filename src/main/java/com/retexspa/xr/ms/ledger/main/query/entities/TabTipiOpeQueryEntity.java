@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "tabTipiOpe")
+@Table(name = "tabTipiOpe", uniqueConstraints = { @UniqueConstraint(columnNames = { "codTipope" }, name = "uk_tabTipiOpe")})
 @Getter
 @Setter
 public class TabTipiOpeQueryEntity {
