@@ -12,6 +12,6 @@ public interface TabOpePagAttributoRepository extends JpaRepository<TabOpePagAtt
 
     List<TabOpePagAttributoQueryEntity> findByTabOpePagIdAndAttributoId(
             String id, String attributoId);
-
+    List<TabOpePagAttributoQueryEntity>  findByAttributoId(String attributoId);
     void deleteByTabOpePagIdAndAttributoId(String id, String attributoId);
 }
