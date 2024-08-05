@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface RegRigaDistintaFinRepository extends JpaRepository<RegRigaDistintaFinQueryEntity, String>, JpaSpecificationExecutor<RegRigaDistintaFinQueryEntity> {
     List<RegRigaDistintaFinQueryEntity> findAllByRigaDistFinId(String rigaDistFinId);
+    boolean existsByOpePag_Id(String tabOpePagId);
 }

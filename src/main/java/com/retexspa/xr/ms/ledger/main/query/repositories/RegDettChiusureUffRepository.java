@@ -9,4 +9,6 @@ import java.util.List;
 public interface RegDettChiusureUffRepository extends JpaRepository<RegDettChiusureUffQueryEntity, String>,
         JpaSpecificationExecutor<RegDettChiusureUffQueryEntity> {
     List<RegDettChiusureUffQueryEntity> findAllByRigaChiUffId(String id);
+    boolean existsByOpePagC01_Id(String tabOpePagId);
+    boolean existsByOpePagC02_Id(String tabOpePagId);
 }
