@@ -14,6 +14,7 @@ public interface TabTipiOpeAttributoRepository extends JpaRepository<TabTipiOpeA
 
     Optional<TabTipiOpeAttributoQueryEntity> findByTabTipiOpeIdAndAttributoId(
             String id, String attributoId);
+    List<TabTipiOpeAttributoQueryEntity> findByAttributoId(String attributoId);
     List<TabTipiOpeAttributoQueryEntity> findByTabTipiOpeId(String id);
     void deleteByTabTipiOpeIdAndAttributoId(String id, String attributoId);
 }

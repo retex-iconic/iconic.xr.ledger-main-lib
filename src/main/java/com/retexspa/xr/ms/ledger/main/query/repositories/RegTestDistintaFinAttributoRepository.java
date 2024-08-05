@@ -14,6 +14,6 @@ public interface RegTestDistintaFinAttributoRepository extends JpaRepository<Reg
     Optional<RegTestDistintaFinAttributoQueryEntity> findByRegTestDistintaFinIdAndAttributoId(
             String id, String attributoId);
     List<RegTestDistintaFinAttributoQueryEntity> findByRegTestDistintaFinId(String id);
-
+    List<RegTestDistintaFinAttributoQueryEntity> findByAttributoId(String attributoId);
     void deleteByRegTestDistintaFinIdAndAttributoId(String id, String attributoId);
 }

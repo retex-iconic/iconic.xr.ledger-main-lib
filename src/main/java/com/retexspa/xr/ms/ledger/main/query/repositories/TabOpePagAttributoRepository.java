@@ -13,6 +13,8 @@ public interface TabOpePagAttributoRepository extends JpaRepository<TabOpePagAtt
 
     Optional<TabOpePagAttributoQueryEntity> findByTabOpePagIdAndAttributoId(
             String id, String attributoId);
-  List<TabOpePagAttributoQueryEntity> findByTabOpePagId(String id);
+   
+    List<TabOpePagAttributoQueryEntity>  findByAttributoId(String attributoId);
+    List<TabOpePagAttributoQueryEntity> findByTabOpePagId(String id);
     void deleteByTabOpePagIdAndAttributoId(String id, String attributoId);
 }
