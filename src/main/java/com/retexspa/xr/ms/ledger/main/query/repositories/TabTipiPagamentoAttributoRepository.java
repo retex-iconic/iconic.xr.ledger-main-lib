@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface TabTipiPagamentoAttributoRepository  extends JpaRepository<TabTipiPagamentoAttributoQueryEntity, String>,
         JpaSpecificationExecutor<TabTipiPagamentoAttributoQueryEntity> {
@@ -13,7 +14,7 @@ public interface TabTipiPagamentoAttributoRepository  extends JpaRepository<TabT
 
     void deleteByTabTipiPagamentoId(String tabTipiPagamentoId);
 
-    List<TabTipiPagamentoAttributoQueryEntity> findByTabTipiPagamentoIdAndAttributoId(
+    Optional<TabTipiPagamentoAttributoQueryEntity> findByTabTipiPagamentoIdAndAttributoId(
             String id, String attributoId);
 
     void deleteByTabTipiPagamentoIdAndAttributoId(String id, String attributoId);
