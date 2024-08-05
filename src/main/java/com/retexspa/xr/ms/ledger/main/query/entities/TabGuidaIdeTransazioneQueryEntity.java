@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tabGuidaIdeTransazione")
+@Table(name = "tabGuidaIdeTransazione", uniqueConstraints = { @UniqueConstraint(columnNames = { "id_forme_pagamento" }, name = "uk_tabGuidaIdeTransazione")})
 @Getter
 @Setter
 public class TabGuidaIdeTransazioneQueryEntity {
