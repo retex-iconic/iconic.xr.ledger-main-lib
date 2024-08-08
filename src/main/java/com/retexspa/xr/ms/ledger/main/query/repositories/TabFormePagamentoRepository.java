@@ -10,4 +10,6 @@ public interface TabFormePagamentoRepository extends JpaRepository<TabFormePagam
         JpaSpecificationExecutor<TabFormePagamentoQueryEntity> {
 
     List<TabFormePagamentoQueryEntity> findAllByCodForPag(String codForPag);
+
+    List<TabFormePagamentoQueryEntity> findAllByTipoPagamentoId(String id);
 }
