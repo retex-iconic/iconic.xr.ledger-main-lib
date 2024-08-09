@@ -19,4 +19,6 @@ public interface TabTipiPagamentoAttributoRepository  extends JpaRepository<TabT
     List<TabTipiPagamentoAttributoQueryEntity> findByAttributoId(String attributoId);
     void deleteByTabTipiPagamentoIdAndAttributoId(String id, String attributoId);
 
+    List<TabTipiPagamentoAttributoQueryEntity> findAllByTabTipiPagamentoIdAndAttributoId(String id, String attributoId);
+
 }
